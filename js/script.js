@@ -16,3 +16,25 @@ if (emailCheck) {
 else {
     emailOutput.innerHTML = `La tua email non è tra le email iscritte. <br/>`
 }
+
+//-----------------------------------------------------
+
+const diceOutput = document.getElementById('dice-output');
+
+const userDice = Math.floor(Math.random() * 6 + 1);
+const cpuDice = Math.floor(Math.random() * 6 + 1);
+
+diceOutput.innerHTML += `Dado giocatore: ${userDice}. <br/>
+                         Dado computer: ${cpuDice}. <br/>`;
+
+if (userDice > cpuDice) {
+    diceOutput.innerHTML += "Vince il giocatore."
+}
+
+else if (userDice < cpuDice) {
+    diceOutput.innerHTML += "Vince il computer."
+}
+
+else {
+    diceOutput.innerHTML += "Pareggio."
+}
